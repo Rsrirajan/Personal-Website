@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: "Helvetica";
+  background-color: #000000;
+}
+strong{
+ font-weight:bold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container p {
+  color: white;
+  font-size: 25px;
+}
+.rectangle h1 {
+  color: white;
+  font-size: 55px;
+}
+.rectangle h3 {
+  color: white;
+  font-size: 25px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.typed {
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: typing;
+  animation-duration: 2s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.c {
+  margin-right: 3%;
+}
+.rectangle a {
+  display: inline;
+  color: black;
+}
+
+.container hr {
+  width: 60%;
+}
+
+.mountains {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.rectangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  height: 50%;
+  width: 70%;
+  background: rgba(5,5,5,0.5);
+  backdrop-filter: blur(20px);
+  text-align: center;
+}
+
+.header {
+  background-color: #000000;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(5,5,5,0.5);
+  text-align:right;
+}
+.header a {
+  float: none;
+  color: white;
+  display: inline;
+}
+.ramanan {
+  color: white;
+  display: inline;
+  margin-right: 70%;
+  font-size: 20px;
+  font-weight:bold;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: cyan;
+  transition: 0.5s;
+}
+.home, .contact, .resume {
+  margin-right: 3%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  height: 65vh;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.contact-form h2 {
+  color: white;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.form-group input[type="text"],
+.form-group textarea {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  font-family: "Helvetica";
+  font-size: 16px;
+}
+
+.send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.send-button button {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.send-button button a {
+  color: black;
+}
+.send-button button:hover {
+  background-color: cyan;
+  transition: 0.5s;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  height: 20vh;
+  background-color: #070D0D;
+}
+.hom, .resum, .cont {
+  float: none;
+  color: grey;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+.m, .b, .resum {
+  display:inline-block;
+}
+.bottom p {
+  color: #5A5A5A;
+  font-size: 12px;
+}
