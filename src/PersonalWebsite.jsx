@@ -4,7 +4,11 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 const Rasenshuriken = () => {
-    const { scene } = useGLTF(`${process.env.PUBLIC_URL}/rasenshuriken/scene.gltf`);
+    const { scene } = useGLTF(`${process.env.PUBLIC_URL}/rasenshuriken/scene.gltf`, true, 
+      (error) => {
+        console.error('Error loading model:', error);
+      }
+    );
     return <primitive object={scene} scale={2} />;
 };
 const scrollToSection = (sectionId) => {
@@ -113,7 +117,7 @@ const PersonalWebsite = () => {
       {/* Hero Section */}
       <div className="h-screen relative overflow-hidden">
         <img 
-          src="mountains.jpg" 
+          src={`${process.env.PUBLIC_URL}/mountains.jpg`} 
           alt="Mountains" 
           className="absolute inset-0 w-full h-full object-cover"
         />
