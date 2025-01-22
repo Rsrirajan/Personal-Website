@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 const Rasenshuriken = () => {
-    const { scene } = useGLTF('/rasenshuriken/scene.gltf');
+    const { scene } = useGLTF(`${process.env.PUBLIC_URL}/rasenshuriken/scene.gltf`);
     return <primitive object={scene} scale={2} />;
 };
 const scrollToSection = (sectionId) => {
@@ -70,7 +70,7 @@ const PersonalWebsite = () => {
             activity: "Anime",
             description: "I've watched over 100 anime and One Piece is my favorite."
         }
-      ]
+    ]
     }
 ];
   
@@ -81,14 +81,14 @@ const PersonalWebsite = () => {
       description: "Extension that automates job applications in the background while you focus on any other task.",
       technologies: ["JavaScript"],
       link: "https://chromewebstore.google.com/detail/laxapply/mpdojlagekabcjidcdpbpbffbppdhafg",
-      image: "/project1.jpg" // Add your project image path
+      image: `${process.env.PUBLIC_URL}/project1.jpg` 
     },
     {
       title: "NLP Disaster Tweet Analysis",
       description: "Utilized Deep Learning, Logistic Regression, and Naive Bayes approaches to analyze locational inference on tweets made about natural disasters.",
       technologies: ["Python", "TensorFlow", "Matplotlib"],
       link: "https://https://github.com/Rsrirajan/NLP-DisasterTweets/tree/main",
-      image: "/project2.jpg" // Add your project image path
+      image: `${process.env.PUBLIC_URL}/project1.jpg`
     },
   ];
 
@@ -239,8 +239,11 @@ const PersonalWebsite = () => {
       <section id="contact" className="py-20 px-4">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center">Contact Me</h2>
-          <form action="mailto:ramanansrirajan@gmail.com" method="POST" encType="text/plain"
-                className="space-y-6">
+          <form onSubmit={(e) => {
+                e.preventDefault();
+                window.location.href = `mailto:ramanansrirajan@gmail.com?subject=${encodeURIComponent(document.getElementById('subject').value)}&body=${encodeURIComponent(document.getElementById('message').value)}`;
+            }}
+            className="space-y-6">
             <div>
               <input
                 type="text"
