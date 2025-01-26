@@ -92,7 +92,7 @@ const PersonalWebsite = () => {
       description: "Utilized Deep Learning, Logistic Regression, and Naive Bayes approaches to analyze locational inference on tweets made about natural disasters.",
       technologies: ["Python", "TensorFlow", "Matplotlib"],
       link: "https://https://github.com/Rsrirajan/NLP-DisasterTweets/tree/main",
-      image: `${process.env.PUBLIC_URL}/project1.jpg`
+      image: `${process.env.PUBLIC_URL}/project2.jpg`
     },
   ];
 
